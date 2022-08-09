@@ -68,7 +68,9 @@
 
 .start-game {
     margin: 0 auto;
-
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .start-game button {
@@ -78,6 +80,7 @@
     background: orangered;
     color: white;
     font-weight: 200;
+    
 }
 
 .start-game h1 {

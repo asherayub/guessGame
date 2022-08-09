@@ -1,3 +1,4 @@
+// ?    start game
 const start = document.querySelector(".start-btn")
 start.addEventListener("click", () => {
     document.querySelector(".start-game").style.display = "none"
@@ -5,7 +6,7 @@ start.addEventListener("click", () => {
 
 })
 
-
+// ?    restart button
 document.querySelector(".restart").addEventListener("click", () => {
     document.querySelector(".menu-ul").classList.remove("menu-ul-collapse")
     numberClicked.forEach((number) => {
@@ -14,7 +15,7 @@ document.querySelector(".restart").addEventListener("click", () => {
     })
 })
 
-
+// ?    menu toggle button
 const menuToggle = document.querySelector(".menu")
 menuToggle.addEventListener("click", () => {
     document.querySelector(".menu-ul").classList.toggle("menu-ul-collapse")
@@ -22,20 +23,25 @@ menuToggle.addEventListener("click", () => {
 
 
 
-
+// ?    number clicked logic
 const numberClicked = document.querySelectorAll('.number')
 numberClicked.forEach((number) => {
     number.addEventListener("click", (e) => {
         if (number.textContent == "") {
             number.textContent = randomNumber()
             number.style.background = "orangered"
+            let numberClickOne = e.target.textContent
+            console.log("click " + numberClickOne);    
         }
-        console.log(e.target.textContent);
+        if(number.textContent == number.textContent){
+            console.log("won");
+        }
     })
 })
 
 
+// ?    generates random number each time it is called
 function randomNumber() {
-    let randomDigit = Math.floor(Math.random() * 5 + 1)
+    let randomDigit = Math.floor(Math.random() * 8 + 1)
     return randomDigit
 }
