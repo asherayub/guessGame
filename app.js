@@ -10,7 +10,7 @@ start.addEventListener("click", () => {
 document.querySelector(".restart").addEventListener("click", () => {
     //?     reset everything
     score = 0
-    scoreSpanEl.textContent =  "0"
+    scoreSpanEl.textContent = "0"
     clickedBtnArray = []
     document.querySelector(".menu-ul").classList.remove("menu-ul-collapse")
     numberClicked.forEach((number) => {
@@ -40,13 +40,9 @@ numberClicked.forEach((number) => {
         if (number.textContent == "") {
             number.textContent = randomNumber()
             number.style.background = "orangered"
-            // let numberClickOne = e.target.textContent
-            // console.log("click " + numberClickOne);
             clickedBtnArray.push(e.target.textContent)
-            console.log(clickedBtnArray);
             if (clickedBtnArray.length == 2) {
                 if (clickedBtnArray[clickedBtnArray.length - 2] == clickedBtnArray[clickedBtnArray.length - 1]) {
-                    console.log("equal");
                     score += 10
                 }
 
@@ -59,6 +55,6 @@ numberClicked.forEach((number) => {
 
 // ?    generates random number each time it is called
 function randomNumber() {
-    let randomDigit = Math.floor(Math.random() * 5 + 1)
+    let randomDigit = Math.floor(Math.random() * 7 + 1)
     return randomDigit
 }
