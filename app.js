@@ -1,3 +1,6 @@
+const clapping = new Audio("/mixkit-small-group-clapping-475.wav")
+
+
 // ?    start game
 const start = document.querySelector(".start-btn")
 start.addEventListener("click", () => {
@@ -43,6 +46,7 @@ numberClicked.forEach((number) => {
             clickedBtnArray.push(e.target.textContent)
             if (clickedBtnArray.length == 2) {
                 if (clickedBtnArray[clickedBtnArray.length - 2] == clickedBtnArray[clickedBtnArray.length - 1]) {
+                    clapping.play()
                     score += 10
                 }
 
