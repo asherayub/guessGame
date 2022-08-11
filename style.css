@@ -44,9 +44,10 @@ body {
 }
 
 .menu-section button {
-    padding: 5px 20px;
+    height: 50px;
+    width: 50px;
     border: none;
-    border-radius: 12px;
+    border-radius: 50%;
     background: orangered;
     color: white;
     font-weight: 200;
@@ -66,7 +67,12 @@ body {
     z-index: 2;
     display: none;
 }
-
+.menu-ul > *{
+    margin: 4px;
+}
+.menu-ul .restart{
+    border-bottom: 2px solid black;
+}
 .menu-ul-collapse {
     display: block;
 }
@@ -140,6 +146,7 @@ body {
     .game-body {
         margin: 100px 0;
         width: 80vw;
+        height: 70vh;
 
     }
 }
@@ -152,5 +159,12 @@ body {
 
     .game {
         padding-bottom: 30px;
+    }
+    .menu-section button{
+        padding: 0 5px;
+        margin: 0;
+    }
+    .menu-ul{
+        padding: 0 5px;
     }
 }

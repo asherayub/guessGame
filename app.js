@@ -22,10 +22,16 @@ document.querySelector(".restart").addEventListener("click", () => {
     })
 })
 
+// ?    exit button
+document.querySelector(".exit").addEventListener("click", ()=>{
+    window.close()
+})
+
 // ?    menu toggle button
 const menuToggle = document.querySelector(".menu")
 menuToggle.addEventListener("click", () => {
     document.querySelector(".menu-ul").classList.toggle("menu-ul-collapse")
+    document.querySelector(".fa-arrow-down").classList.toggle("fa-arrow-up")
 })
 
 
